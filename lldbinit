@@ -12,4 +12,5 @@ command alias uikit expr @import UIKit
 command alias foundation expr @import Foundation
 command regex pdt 's/(.+)/print %1.dynamicType/'
 command regex pframe 's/(.+)/print (CGRect)[%1 frame]/'
-command regex psjson 'print(String(data: try! JSONSerialization.data(withJSONObject: $1, options: .prettyPrinted), encoding: .utf8 )!)'
+# Print Swift DICTionary -> psdict
+command regex psdict 'print(String(data: try! JSONSerialization.data(withJSONObject: $1, options: .prettyPrinted), encoding: .utf8 )!)'
