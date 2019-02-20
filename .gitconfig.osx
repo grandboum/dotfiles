@@ -1,0 +1,49 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta
+    plain = white bold
+    old = red
+    new = green
+    commit = yellow bold
+    func = green dim
+    #plain = white bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[credential]
+    helper = osxkeychain
+
+[core]
+    editor = `which vim`
+    quotepath = false
+
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lt = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -10
+    st = status
+    ts = status
+    di = diff
+    cam = commit -a -m
+    cm = commit -m
+    pom = push origin master
+    amen = commit --amend
+    yolo = push --force
+    co = checkout
+    diff-exclude = !git diff -- $(git diff --name-only | grep -Ev $1) #
+
+[push]
+	default = upstream
