@@ -40,3 +40,5 @@ Thumbs.db
 # Python files #
 ################
 .pyc
+
+.vim/bundle
