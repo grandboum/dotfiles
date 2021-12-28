@@ -48,3 +48,8 @@
 
 [push]
 	default = upstream
+[user]
+	name = Illia Akhaiev
+	email = 26223450+grandboum@users.noreply.github.com
+[commit]
+	gpgsign = true
