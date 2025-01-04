@@ -25,7 +25,7 @@ set ttyfast                 " smoother changes
 set nostartofline           " don't jump to first character when paging
 set noerrorbells            " don't bell
 set vb t_vb=                " don't blink
-set cursorline              " have a line indicate the cursor location
+"set cursorline              " have a line indicate the cursor location
 set virtualedit=block       " Let cursor move past the last char in <C-v> mode
 set backspace=2             " Allow backspacing over autoindent, EOL, and BOL
 "set showmatch               " Briefly jump to a paren once it's balanced
@@ -34,7 +34,7 @@ set linebreak               " don't wrap textin the middle of a word
 set autoindent              " always set autoindenting on
 set smartindent             " use smart indent if there is no indent file
 set tabstop=4               " <tab> inserts 4 spaces 
-set shiftwidth=4            " but an indent level is 2 spaces wide.
+set shiftwidth=4 smarttab   " but an indent level is 2 spaces wide.
 set softtabstop=4           " <BS> over an autoindent deletes both spaces.
 set expandtab               " Use spaces, not tabs, for autoindent/tab key.
 set shiftround              " rounds indent to a multiple of shiftwidth
@@ -58,7 +58,11 @@ set smartcase               " unless uppercase letters are used in the regex.
 set smarttab                " Handle tabs more intelligently 
 "set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
-set colorcolumn=80          " Show 80th column marker
+set colorcolumn=120         " Show 80th column marker
+
+"If you'd also like vim to only use space caharacters, never tab characters:
+
+set expandtab
 
 let g:loaded_matchparen=1
 " displays tabs with :set list & displays when a line runs off-screen
@@ -70,7 +74,7 @@ call vundle#begin()
 
 " Vundle plugins
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdtree'
 "Plugin 'b4winckler/vim-objc'
 "Plugin 'guns/ultisnips'
 "Plugin 'Rip-Rip/clang_complete'
