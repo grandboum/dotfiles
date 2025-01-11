@@ -1,2 +1,4 @@
-fish_add_path /opt/local/bin
-fish_add_path /opt/local/sbin
+if status is-interactive
+    fish_add_path /opt/local/bin
+    fish_add_path /opt/local/sbin
+end
