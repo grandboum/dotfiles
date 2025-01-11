@@ -30,13 +30,17 @@
 [core]
     editor = `which vim`
     quotepath = false
+	excludesfile = /Users/illiaakhaiev/.gitignore_global
+
+[diff]
+    tool = vimdiff
 
 [alias]
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    lt = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -10
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=human
+    lt = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -10
     st = status
     ts = status
-    di = diff
+    di = difftool
     cam = commit -a -m
     cm = commit -m
     pom = push origin master
@@ -45,6 +49,8 @@
     co = checkout
     diff-exclude = !git diff -- $(git diff --name-only | grep -Ev $1) #
     git = !exec git
+    nuke = reset HEAD --hard
+    reopen = reset HEAD~1 --mixed
 
 [push]
 	default = upstream
