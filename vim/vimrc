@@ -8,7 +8,7 @@ command! W :w               " >_< Woah, at last I fixed this
 " ---------------------------
 set nocompatible            " Don't be compatible with vi
 syntax on                   " syntax highlighing
-"colorscheme solarized      " Set colorscheme to soloarized
+colorscheme dracula         " Set colorscheme to dracula
 filetype off                " 
 
 set encoding=utf-8 fileencoding=utf-8 termencoding=utf-8 " saving and encoding
@@ -68,19 +68,6 @@ let g:loaded_matchparen=1
 " displays tabs with :set list & displays when a line runs off-screen
 set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
 
-""" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Vundle plugins
-Plugin 'gmarik/Vundle.vim'
-Plugin 'preservim/nerdtree'
-"Plugin 'b4winckler/vim-objc'
-"Plugin 'guns/ultisnips'
-"Plugin 'Rip-Rip/clang_complete'
-
-" Finish
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 """ Nerdtree

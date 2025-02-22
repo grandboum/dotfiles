@@ -41,4 +41,7 @@ Thumbs.db
 ################
 .pyc
 
-.vim/bundle
+
+# Vim plugins #
+###############
+vim/pack
