@@ -39,4 +39,4 @@ Thumbs.db
 
 # Python files #
 ################
-.pyc
+*.pyc

@@ -24,16 +24,12 @@
     changed = green
     untracked = cyan
 
-[credential]
-    helper = osxkeychain
-
 [core]
     editor = `which vim`
     quotepath = false
-	excludesfile = /Users/illiaakhaiev/.gitignore_global
 
 [diff]
-    tool = vimdiff
+    tool = `which vimdiff`
 
 [alias]
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=human
@@ -54,8 +50,7 @@
 
 [push]
 	default = upstream
-[user]
-	name = Illia Akhaiev
-	email = 26223450+grandboum@users.noreply.github.com
-[commit]
-	gpgsign = true
+
+# TODO: fix this
+# [commit]
+#	gpgsign = true
